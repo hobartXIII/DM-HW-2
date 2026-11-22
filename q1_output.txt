@@ -1,0 +1,181 @@
+== 基本資訊 ==
+Name            str
+Type 1          str
+Type 2          str
+HP            int64
+Attack        int64
+Defense       int64
+Sp. Atk       int64
+Sp. Def       int64
+Speed         int64
+Generation    int64
+Legendary       str
+缺值:
+ Name        1
+Type 2    386
+Legendary 值: <StringArray>
+['FALSE', 'TRUE']
+Length: 2, dtype: str
+combats: 50000 先手勝比例 0.472
+自己打自己: 0  重複對戰組合: 1952
+從未出場: 16  出場次數 min/mean/max: 92 125.0 164
+
+== 數值屬性平均、標準差 ==
+          HP  Attack  Defense  Sp. Atk  Sp. Def   Speed   Total
+mean   69.26   79.00    73.84    72.82    71.90   68.28  435.10
+std    25.53   32.46    31.18    32.72    27.83   29.06  119.96
+min     1.00    5.00     5.00    10.00    20.00    5.00  180.00
+max   255.00  190.00   230.00   194.00   230.00  180.00  780.00
+
+== 數值屬性與個體勝率的 Pearson 相關 ==
+Speed         0.938
+Total         0.650
+Attack        0.503
+Sp. Atk       0.481
+Sp. Def       0.302
+HP            0.262
+Defense       0.115
+Generation    0.023
+
+== 勝率前 / 後五名 ==
+                       Name  Type 1  Type 2  HP  Attack  Defense  Sp. Atk  Sp. Def  Speed Legendary  games  win_rate
+#                                                                                                                   
+155         Mega Aerodactyl    Rock  Flying  80     135       85       70       95    150     FALSE    129     0.984
+513                 Weavile    Dark     Ice  70     120       65       45       85    125     FALSE    119     0.975
+704  Tornadus Therian Forme  Flying     NaN  79     100       80      110       90    121      TRUE    125     0.968
+20            Mega Beedrill     Bug  Poison  65     150       40       15       80    145     FALSE    119     0.966
+154              Aerodactyl    Rock  Flying  80     105       65       60       75    130     FALSE    141     0.965
+        Name   Type 1 Type 2  HP  Attack  Defense  Sp. Atk  Sp. Def  Speed Legendary  games  win_rate
+#                                                                                                    
+231  Shuckle      Bug   Rock  20      10      230       10      230      5     FALSE    135     0.000
+290  Silcoon      Bug    NaN  50      35       55       25       25     15     FALSE    138     0.022
+190   Togepi    Fairy    NaN  35      20       65       40       65     20     FALSE    122     0.025
+639  Solosis  Psychic    NaN  45      30       40      105       50     20     FALSE    129     0.031
+237   Slugma     Fire    NaN  40      40       40       70       40     20     FALSE    123     0.033
+
+== Type 1 分布與平均勝率 ==
+            n    win    speed    total
+Type 1                                
+Flying      4  0.765  102.500  485.000
+Dragon     32  0.634   83.031  550.531
+Electric   44  0.633   84.500  443.409
+Dark       31  0.630   76.161  445.742
+Fire       52  0.579   74.442  458.077
+Psychic    57  0.546   81.491  475.947
+Ground     32  0.542   63.906  437.500
+Normal     98  0.536   71.551  401.684
+Ghost      32  0.484   64.344  439.562
+Fighting   27  0.476   66.074  416.444
+Water     112  0.469   65.964  430.455
+Grass      70  0.440   61.929  421.143
+Ice        24  0.440   63.458  433.458
+Poison     28  0.433   63.571  399.143
+Bug        69  0.433   61.681  378.928
+Steel      27  0.425   55.259  487.704
+Rock       44  0.405   55.909  453.750
+Fairy      17  0.329   48.588  413.176
+
+== 單屬性 vs 雙屬性 ==
+         n    win    total
+dual                      
+False  386  0.466  412.016
+True   414  0.534  456.628
+
+== Legendary / Generation ==
+             n    win    total
+Legendary                     
+FALSE      735  0.476  417.214
+TRUE        65  0.779  637.385
+              n    win
+Generation            
+1           166  0.519
+2           106  0.446
+3           160  0.478
+4           121  0.538
+5           165  0.519
+6            82  0.489
+
+== 對戰層級：差值 (First - Second) 的符號與先手勝率 ==
+  feature  P(first win | d>0)  P(first win | d<0)  ties  corr(d, y)
+     d_HP              0.5811              0.3636  1944      0.1942
+ d_Attack              0.6271              0.3179  1223      0.3619
+d_Defense              0.5238              0.4208  1544      0.0794
+d_Sp. Atk              0.6227              0.3201  1479      0.3489
+d_Sp. Def              0.5825              0.3618  1743      0.2188
+  d_Speed              0.9239              0.0460  1328      0.6777
+  d_Total              0.6705              0.2722   602      0.4702
+
+== 候選特徵的 Fisher score（對戰層級）==
+first_faster    3.4775
+d_Speed         0.8495
+d_Total         0.2838
+ratio_Speed     0.2432
+d_Attack        0.1507
+d_Sp. Atk       0.1386
+d_SpA_vs_SpD    0.1250
+d_Atk_vs_Def    0.0741
+d_Legendary     0.0591
+d_Sp. Def       0.0503
+d_HP            0.0392
+d_Defense       0.0063
+d_Generation    0.0002
+
+== 較快的一方勝率，依速度差分組 ==
+                  size   mean
+d_Speed                      
+(-200.0, -50.0]   6209  0.081
+(-50.0, -20.0]   10294  0.049
+(-20.0, -5.0]     6763  0.016
+(-5.0, -0.5]      1072  0.007
+(-0.5, 0.5]       1328  0.000
+(0.5, 5.0]        2333  0.955
+(5.0, 20.0]       6784  0.947
+(20.0, 50.0]      9741  0.917
+(50.0, 200.0]     5476  0.894
+
+== Type 1 對戰（以先手屬性分組的先手勝率，扣掉速度影響前）==
+          size   mean
+Flying     242  0.744
+Dragon    1970  0.614
+Electric  2649  0.613
+Dark      1891  0.605
+Fire      3266  0.563
+Psychic   3728  0.529
+Ground    1925  0.514
+Normal    6038  0.501
+Water     7015  0.444
+Fighting  1661  0.437
+Grass     4257  0.421
+Ghost     1985  0.415
+Ice       1499  0.408
+Bug       4386  0.402
+Poison    1805  0.402
+Rock      2877  0.377
+Steel     1761  0.374
+Fairy     1045  0.306
+
+== 屬性相剋（features.py）：控制速度後是否還有影響 ==
+                size                          mean                 
+speed   first faster first slower/tie first faster first slower/tie
+adv                                                                
+adv             6688             6908        0.950            0.090
+disadv          6545             7185        0.855            0.016
+neutral        11101            11573        0.948            0.033
+Fisher eff_1on2 0.0092  eff_2on1 0.0026  eff_adv 0.0087
+
+== 傳說神奇寶貝：控制速度後 ==
+                      size                          mean                 
+speed         first faster first slower/tie first faster first slower/tie
+leg                                                                      
+first legend          3055              682        0.954            0.019
+same                 20688            21822        0.919            0.047
+second legend          591             3162        0.949            0.029
+
+== 單/雙屬性：控制速度後（先手是否雙屬性）==
+              size                          mean                 
+speed first faster first slower/tie first faster first slower/tie
+dual1                                                            
+False        11011            13020        0.914            0.035
+True         13323            12646        0.932            0.052
+
+== 只用 first_faster 一條規則的準確率 == 0.9405

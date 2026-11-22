@@ -1,0 +1,45 @@
+<!-- 完整屬性分布 -->
+<table>
+  <tr><th>屬性</th><th>英文</th><th>Type 1</th><th>Type 2</th><th>合計</th><th>其中單屬性</th><th>平均勝率</th><th>平均 Speed</th><th>平均 Total</th></tr>
+  <tr><td>水</td><td>Water</td><td>112</td><td>14</td><td>126</td><td>59</td><td>0.463</td><td>65.0</td><td>429</td></tr>
+  <tr><td>一般</td><td>Normal</td><td>98</td><td>4</td><td>102</td><td>61</td><td>0.540</td><td>72.2</td><td>402</td></tr>
+  <tr><td>飛行</td><td>Flying</td><td>4</td><td>97</td><td>101</td><td>2</td><td>0.668</td><td>86.4</td><td>454</td></tr>
+  <tr><td>草</td><td>Grass</td><td>70</td><td>25</td><td>95</td><td>33</td><td>0.435</td><td>60.7</td><td>418</td></tr>
+  <tr><td>超能力</td><td>Psychic</td><td>57</td><td>33</td><td>90</td><td>38</td><td>0.533</td><td>77.1</td><td>477</td></tr>
+  <tr><td>蟲</td><td>Bug</td><td>69</td><td>3</td><td>72</td><td>17</td><td>0.433</td><td>61.7</td><td>380</td></tr>
+  <tr><td>地面</td><td>Ground</td><td>32</td><td>35</td><td>67</td><td>13</td><td>0.454</td><td>59.1</td><td>441</td></tr>
+  <tr><td>火</td><td>Fire</td><td>52</td><td>12</td><td>64</td><td>28</td><td>0.589</td><td>75.4</td><td>467</td></tr>
+  <tr><td>毒</td><td>Poison</td><td>28</td><td>34</td><td>62</td><td>15</td><td>0.443</td><td>65.3</td><td>398</td></tr>
+  <tr><td>岩石</td><td>Rock</td><td>44</td><td>14</td><td>58</td><td>9</td><td>0.376</td><td>51.1</td><td>449</td></tr>
+  <tr><td>格鬥</td><td>Fighting</td><td>27</td><td>26</td><td>53</td><td>20</td><td>0.576</td><td>76.5</td><td>470</td></tr>
+  <tr><td>惡</td><td>Dark</td><td>31</td><td>20</td><td>51</td><td>10</td><td>0.616</td><td>75.8</td><td>461</td></tr>
+  <tr><td>龍</td><td>Dragon</td><td>32</td><td>18</td><td>50</td><td>11</td><td>0.623</td><td>82.1</td><td>542</td></tr>
+  <tr><td>電</td><td>Electric</td><td>44</td><td>6</td><td>50</td><td>27</td><td>0.621</td><td>82.9</td><td>445</td></tr>
+  <tr><td>鋼</td><td>Steel</td><td>27</td><td>22</td><td>49</td><td>5</td><td>0.458</td><td>57.1</td><td>487</td></tr>
+  <tr><td>幽靈</td><td>Ghost</td><td>32</td><td>14</td><td>46</td><td>10</td><td>0.473</td><td>61.2</td><td>437</td></tr>
+  <tr><td>妖精</td><td>Fairy</td><td>17</td><td>23</td><td>40</td><td>15</td><td>0.387</td><td>55.9</td><td>416</td></tr>
+  <tr><td>冰</td><td>Ice</td><td>24</td><td>14</td><td>38</td><td>13</td><td>0.494</td><td>67.6</td><td>467</td></tr>
+</table>
+
+<!-- 屬性相剋表 -->
+<table class="chart">
+  <tr><th>攻＼防</th><th>一般</th><th>火</th><th>水</th><th>電</th><th>草</th><th>冰</th><th>格鬥</th><th>毒</th><th>地面</th><th>飛行</th><th>超能力</th><th>蟲</th><th>岩石</th><th>幽靈</th><th>龍</th><th>惡</th><th>鋼</th><th>妖精</th></tr>
+  <tr><th>一般</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="nv">½</td><td class="im">0</td><td></td><td></td><td class="nv">½</td><td></td></tr>
+  <tr><th>火</th><td></td><td class="nv">½</td><td class="nv">½</td><td></td><td class="se">2</td><td class="se">2</td><td></td><td></td><td></td><td></td><td></td><td class="se">2</td><td class="nv">½</td><td></td><td class="nv">½</td><td></td><td class="se">2</td><td></td></tr>
+  <tr><th>水</th><td></td><td class="se">2</td><td class="nv">½</td><td></td><td class="nv">½</td><td></td><td></td><td></td><td class="se">2</td><td></td><td></td><td></td><td class="se">2</td><td></td><td class="nv">½</td><td></td><td></td><td></td></tr>
+  <tr><th>電</th><td></td><td></td><td class="se">2</td><td class="nv">½</td><td class="nv">½</td><td></td><td></td><td></td><td class="im">0</td><td class="se">2</td><td></td><td></td><td></td><td></td><td class="nv">½</td><td></td><td></td><td></td></tr>
+  <tr><th>草</th><td></td><td class="nv">½</td><td class="se">2</td><td></td><td class="nv">½</td><td></td><td></td><td class="nv">½</td><td class="se">2</td><td class="nv">½</td><td></td><td class="nv">½</td><td class="se">2</td><td></td><td class="nv">½</td><td></td><td class="nv">½</td><td></td></tr>
+  <tr><th>冰</th><td></td><td class="nv">½</td><td class="nv">½</td><td></td><td class="se">2</td><td class="nv">½</td><td></td><td></td><td class="se">2</td><td class="se">2</td><td></td><td></td><td></td><td></td><td class="se">2</td><td></td><td class="nv">½</td><td></td></tr>
+  <tr><th>格鬥</th><td class="se">2</td><td></td><td></td><td></td><td></td><td class="se">2</td><td></td><td class="nv">½</td><td></td><td class="nv">½</td><td class="nv">½</td><td class="nv">½</td><td class="se">2</td><td class="im">0</td><td></td><td class="se">2</td><td class="se">2</td><td class="nv">½</td></tr>
+  <tr><th>毒</th><td></td><td></td><td></td><td></td><td class="se">2</td><td></td><td></td><td class="nv">½</td><td class="nv">½</td><td></td><td></td><td></td><td class="nv">½</td><td class="nv">½</td><td></td><td></td><td class="im">0</td><td class="se">2</td></tr>
+  <tr><th>地面</th><td></td><td class="se">2</td><td></td><td class="se">2</td><td class="nv">½</td><td></td><td></td><td class="se">2</td><td></td><td class="im">0</td><td></td><td class="nv">½</td><td class="se">2</td><td></td><td></td><td></td><td class="se">2</td><td></td></tr>
+  <tr><th>飛行</th><td></td><td></td><td></td><td class="nv">½</td><td class="se">2</td><td></td><td class="se">2</td><td></td><td></td><td></td><td></td><td class="se">2</td><td class="nv">½</td><td></td><td></td><td></td><td class="nv">½</td><td></td></tr>
+  <tr><th>超能力</th><td></td><td></td><td></td><td></td><td></td><td></td><td class="se">2</td><td class="se">2</td><td></td><td></td><td class="nv">½</td><td></td><td></td><td></td><td></td><td class="im">0</td><td class="nv">½</td><td></td></tr>
+  <tr><th>蟲</th><td></td><td class="nv">½</td><td></td><td></td><td class="se">2</td><td></td><td class="nv">½</td><td class="nv">½</td><td></td><td class="nv">½</td><td class="se">2</td><td></td><td></td><td class="nv">½</td><td></td><td class="se">2</td><td class="nv">½</td><td class="nv">½</td></tr>
+  <tr><th>岩石</th><td></td><td class="se">2</td><td></td><td></td><td></td><td class="se">2</td><td class="nv">½</td><td></td><td class="nv">½</td><td class="se">2</td><td></td><td class="se">2</td><td></td><td></td><td></td><td></td><td class="nv">½</td><td></td></tr>
+  <tr><th>幽靈</th><td class="im">0</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="se">2</td><td></td><td></td><td class="se">2</td><td></td><td class="nv">½</td><td></td><td></td></tr>
+  <tr><th>龍</th><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="se">2</td><td></td><td class="nv">½</td><td class="im">0</td></tr>
+  <tr><th>惡</th><td></td><td></td><td></td><td></td><td></td><td></td><td class="nv">½</td><td></td><td></td><td></td><td class="se">2</td><td></td><td></td><td class="se">2</td><td></td><td class="nv">½</td><td></td><td class="nv">½</td></tr>
+  <tr><th>鋼</th><td></td><td class="nv">½</td><td class="nv">½</td><td class="nv">½</td><td></td><td class="se">2</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="se">2</td><td></td><td></td><td></td><td class="nv">½</td><td class="se">2</td></tr>
+  <tr><th>妖精</th><td></td><td class="nv">½</td><td></td><td></td><td></td><td></td><td class="se">2</td><td class="nv">½</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="se">2</td><td class="se">2</td><td class="nv">½</td><td></td></tr>
+</table>

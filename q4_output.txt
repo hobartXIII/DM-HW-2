@@ -1,0 +1,8 @@
+訓練參數: -t 2 -c 10 -g 10 -b 1
+labels 順序 [0, 1]；ROC 點數 9901（不同分數 9900 個 + 起點）
+AUC（梯形法）= 0.967267   AUC（排名驗算）= 0.967267
+門檻 0.5：TPR 0.9517 FPR 0.0551 acc 0.9481
+svm-predict -b 1 的 label：acc 0.9481（TP 4492 FN 228 FP 291 TN 4989）
+只看速度規則：TPR 0.9557 FPR 0.0710
+Youden J 最大：門檻 0.1412  TPR 0.9644  FPR 0.0655
+已輸出 fig_q4_roc.png
